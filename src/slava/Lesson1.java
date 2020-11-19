@@ -79,7 +79,7 @@ public class Lesson1 {
             }
         }
         System.out.println(Arrays.toString(arr2));
-        //второе решение
+        //проверочное решение
         Arrays.sort(arr3);
         System.out.println(Arrays.toString(arr3));
 
