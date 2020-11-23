@@ -1,4 +1,4 @@
-package slava;
+package Lesson1;
 
 import java.util.Arrays;
 import java.util.Scanner;
