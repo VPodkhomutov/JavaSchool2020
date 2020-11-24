@@ -7,12 +7,12 @@ import java.time.format.DateTimeFormatter;
 
         @Override
         public String getName() {
-            return "Текущая дата";
+            return "date";
         }
 
         @Override
         public void execute() {
-            System.out.println(getName() + ": "+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("d.M.uuuu")));
+            System.out.println("Сегодня: "+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("d.M.uuuu")));
         }
     }
 

@@ -7,11 +7,11 @@ public class Time implements Command{
 
     @Override
     public String getName() {
-        return "Текущее время";
+        return "time";
     }
 
     @Override
     public void execute() {
-        System.out.println(getName() + ": "+LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        System.out.println("Текущее время: "+LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
     }
 }

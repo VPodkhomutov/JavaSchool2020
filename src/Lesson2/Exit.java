@@ -7,12 +7,12 @@ public class Exit implements Command{
 
     @Override
     public String getName() {
-        return "Программа завершена";
+        return "exit";
     }
 
     @Override
     public void execute() {
-        System.out.println(getName());
+        System.out.println("Спасибо за использование программы Shell");
         System.exit(0);
     }
 }
