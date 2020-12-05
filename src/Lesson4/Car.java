@@ -3,8 +3,8 @@ package Lesson4;
 import java.util.Objects;
 
 public class Car implements Comparable<Car> {
-    String name;
-    int power;
+    private String name;
+    private int power;
 
     public Car(String name, int power) {
         this.name = name;
@@ -13,9 +13,13 @@ public class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car o) {
-        if (this.name.equals(o.name)) {return 0;}
-        else if (this.name.length()<o.name.length()) {return 1;}
-        else {return 1;}
+        if (this.name.equals(o.getName())) {
+            return 0;
+        } else if (this.name.length() < o.getName().length()) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 
     public String getName() {

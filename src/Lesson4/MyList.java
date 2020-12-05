@@ -39,17 +39,20 @@ public class MyList {
         /*-------3----------*/
         System.out.println(list);
         Collections.sort(list, new CarComparator());
+        System.out.println(list);
+        System.out.println("------------");
+
         /*-------4----------*/
-        Set<Car> treeSet = new TreeSet<Car>();
-        for (Car cars : list) {
+        Set<Car> treeSet = new TreeSet<Car>(list);
+        /*for (Car cars : list) {
             treeSet.add(cars);
-        }
+        }*/
         System.out.println(treeSet);
         /*---------5---------------------*/
         int fullPower = 0;
         for (Car car : treeSet) {
-            if (car.name.startsWith("A")) {
-                fullPower += car.power;
+            if (car.getName().startsWith("A")) {
+                fullPower += car.getPower();
             }
         }
         System.out.println("Машины, название которых начинается на А имеют суммарную мощность: " + fullPower + " л.с.");
@@ -82,11 +85,11 @@ public class MyList {
         System.out.println(billList);
         HashMap<Car, List<Bill>> taxiMap = new HashMap<>();
         for (Bill bill : billList) {
-            if (taxiMap.keySet().contains(bill.taxi_name)) {
-                taxiMap.get(bill.taxi_name).add(bill);
-            } else {
-                taxiMap.put(bill.taxi_name, new ArrayList<Bill>());
-                taxiMap.get(bill.taxi_name).add(bill);
+            if (taxiMap.containsKey(bill.getTaxi_name()))
+                taxiMap.get(bill.getTaxi_name()).add(bill);
+            else {
+                taxiMap.put(bill.getTaxi_name(), new ArrayList<Bill>());
+                taxiMap.get(bill.getTaxi_name()).add(bill);
             }
         }
         System.out.println(taxiMap);
@@ -96,9 +99,9 @@ public class MyList {
     public static class CarComparator implements Comparator<Car> {
         @Override
         public int compare(Car o1, Car o2) {
-            if (o1.name.length() < o2.name.length()) {
+            if (o1.getName().length() < o2.getName().length()) {
                 return -1;
-            } else if (o1.name.length() > o2.name.length()) {
+            } else if (o1.getName().length() > o2.getName().length()) {
                 return 1;
             } else {
                 return 0;

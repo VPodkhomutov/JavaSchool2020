@@ -3,8 +3,24 @@ package Lesson4;
 import java.util.Objects;
 
 public class Bill implements Comparable {
-    Car taxi_name;
-    int price;
+    private Car taxi_name;
+    private int price;
+
+    public Car getTaxi_name() {
+        return taxi_name;
+    }
+
+    public void setTaxi_name(Car taxi_name) {
+        this.taxi_name = taxi_name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public Bill(Car taxi_name, int price) {
         this.taxi_name = taxi_name;
