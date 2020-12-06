@@ -93,23 +93,8 @@ public class MyList {
             }
         }
         System.out.println(taxiMap);
-        /*-----------------------8---------------------*/
-        /* получаем суммарный доход по ключу машина*/
-        HashMap<Car, Integer> taxiDebit = new HashMap<>();
-        for (Map.Entry<Car, List<Bill>> entry : taxiMap.entrySet()) {
-            taxiDebit.put(entry.getKey(),sumPrice(entry.getValue()));
-        }
-        System.out.println("-------new Map------");
-        System.out.println(taxiDebit);
     }
 
-     private static Integer sumPrice(List<Bill> lb) {
-        Integer result = 0;
-        for (Bill bill : lb) {
-            result += bill.getPrice();
-        }
-        return result;
-    }
 
     public static class CarComparator implements Comparator<Car> {
         @Override
