@@ -4,6 +4,7 @@ import java.util.List;
 
 public class GenInterfImpl implements GenericInterface<Person> {
 
+
     @Override
     public Person maxximum(List<Person> list) {
         Person res = null;

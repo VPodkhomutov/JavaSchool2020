@@ -9,6 +9,8 @@ public class ClientIdentifiable extends Client {
         this.idClient = idClient;
     }
 
+
+
     public ClientIdentifiable() {
     }
 

@@ -6,6 +6,7 @@ public class ClientShopper extends ClientIdentifiable {
     private String name;
     private int id;
 
+
     public ClientShopper( String name1, int id) {
         this.name = name1;
         this.id = id;

@@ -9,6 +9,7 @@ public class Main5 {
         Client c1 = new Client(); c1.setName("Petr");
         ClientIdentifiable ci1 = new ClientIdentifiable("Vasiliy", 2);
 
+
         List<Client> fullClient = new ArrayList<>();
         fullClient.add(c1);
         fullClient.add(cs1);
