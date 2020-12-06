@@ -14,6 +14,8 @@ public class Main5 {
         fullClient.add(c1);
         fullClient.add(cs1);
         fullClient.add(ci1);
+        fullClientShow(fullClient);
+        twoClientShow(fullClient);
         /*--3---*/
         Person p1 = new Person();
         p1.setName("Ivan");
