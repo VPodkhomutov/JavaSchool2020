@@ -13,19 +13,13 @@ public class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car o) {
-        if (this.name.isEmpty() || o.getName().isEmpty()){
-             return 1;  //мы же не проходили исключения ))))
-         }
-        else
-         {
-            if (this.name.equals(o.getName())) {
-                return 0;
-            } else if (this.name.length() < o.getName().length()) {
-                return -1;
-            } else {
-                return 1;
-            }
-         }
+        if (this.name.equals(o.getName())) {
+            return 0;
+        } else if (this.name.length() < o.getName().length()) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 
     public String getName() {
