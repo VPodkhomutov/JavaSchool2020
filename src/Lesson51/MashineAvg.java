@@ -12,6 +12,11 @@ public class MashineAvg implements BaseI<Mashine, Integer> {
     }
 
     @Override
+    public int sumValue(Integer u1, int curr) {
+        return curr+u1;
+    }
+
+    @Override
     public boolean isPower(Integer u1, Integer u2) {
         return false;
     }

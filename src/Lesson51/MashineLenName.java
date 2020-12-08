@@ -11,8 +11,17 @@ public class MashineLenName implements BaseI<Mashine,String> {
             return element.getModel();
         }
 
-        @Override
+    @Override
+    public int sumValue(String u1, int curr) {
+        return curr+u1.length();
+    }
+
+    @Override
         public boolean isPower(String u1, String u2) {
             return u1.length()>u2.length();
         }
+
+
+
+
     }
