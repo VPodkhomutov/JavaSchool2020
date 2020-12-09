@@ -1,7 +1,9 @@
 package Lesson51;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 public interface BaseI<T,U> {
     public default Mashine calc(Collection<T> collection){
@@ -24,17 +26,16 @@ public interface BaseI<T,U> {
         return mashine;
     }
 
-    public default int compare(T t1, T t2){
-        U param1;
-        U param2;
-            param1 = getValue(t1);
-            param2 = getValue(t2);
-            if (param1==param2) {return 0;}
+
+    /*public default int compare(T t1, T t2){
+        U param1 = getValue(t1);;
+        U param2 = getValue(t2);
+            if (param1.equals(param2)) {return 0;}
             else if (isPower(param1, param2)) {
                   return 1;
                 }
             else return -1;
-        }
+        }*/
 
 
     public default Mashine middle(Collection<T> collection){
@@ -53,11 +54,9 @@ public interface BaseI<T,U> {
     }
 
     public default Integer avgMashine(Collection<T> collection){
-        U param;
         Integer res=0;
-        Mashine mashine = null;
         if (collection == null || collection.isEmpty()) {return 0;}
-        if (collection != null && !collection.isEmpty()) {
+        else  {
             Iterator<T> iterator = collection.iterator();
             while(iterator.hasNext()) {
                 T current = iterator.next();
@@ -75,4 +74,6 @@ public interface BaseI<T,U> {
     int sumValue(U u1, int curr);
 
     boolean isPower(U u1, U u2);
+
+    public ArrayList<T> sort(ArrayList<T> collection);
 }

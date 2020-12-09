@@ -1,6 +1,9 @@
 package Lesson51;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
+import java.util.List;
 
 public class MashinePower implements BaseI<Mashine,Integer> {
     @Override
@@ -23,11 +26,10 @@ public class MashinePower implements BaseI<Mashine,Integer> {
         return u1.compareTo(u2)>0;
     }
 
-    public static class MashinePowerComparator extends MashinePower implements Comparator<Mashine> {
-        @Override
-        public int compare(Mashine t1, Mashine t2) {
-        return super.compare(t1,t2);
-        }
+    @Override
+    public ArrayList<Mashine> sort(ArrayList<Mashine> collection) {
+        return null;
     }
+
 
 }

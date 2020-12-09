@@ -1,5 +1,9 @@
 package Lesson51;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 public class MashineAvg implements BaseI<Mashine, Integer> {
     @Override
     public Mashine getMashine(Mashine element) {
@@ -20,4 +24,10 @@ public class MashineAvg implements BaseI<Mashine, Integer> {
     public boolean isPower(Integer u1, Integer u2) {
         return false;
     }
+
+    @Override
+    public ArrayList<Mashine> sort(ArrayList<Mashine> collection) {
+        return null;
+    }
+
 }
