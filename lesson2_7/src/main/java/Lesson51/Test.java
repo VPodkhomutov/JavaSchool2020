@@ -44,7 +44,7 @@ public class Test {
         });
         System.out.println(mashineList);
         System.out.println("-----------сортировка через lambda выражение(тоже самое что и анонимный компаратор)----------------");
-        Collections.sort(mashineList, (o1, o2) -> o1.getPlace()-o2.getPlace());
+        //Collections.sort(mashineList, (o1, o2) -> o1.getPlace()-o2.getPlace());
     }
 
     public void exceptionCall(){
