@@ -6,7 +6,7 @@ import java.util.Map;
 public class SettingsLoader {
 
     public Map<String, String> loadSettings() {
-        System.out.println("Если вы видите этот лог, то тест написан неправильно");
+        System.out.println("Если вы видите этот лог, то тест написан неправильно5");
         return Collections.emptyMap();
     }
 }

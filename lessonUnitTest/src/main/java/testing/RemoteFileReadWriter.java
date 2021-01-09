@@ -6,11 +6,11 @@ import java.util.Map;
 
 public class RemoteFileReadWriter {
     public List<String> readFileToList(Map<String, String> settings) {
-        System.out.println("Если вы видите этот лог, то тест написан неправильно");
+        System.out.println("Если вы видите этот лог, то тест написан неправильно3");
         return Collections.emptyList();
     }
 
     public void writeResponse() {
-        System.out.println("Если вы видите этот лог, то тест написан неправильно");
+        System.out.println("Если вы видите этот лог, то тест написан неправильно4");
     }
 }
