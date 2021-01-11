@@ -53,7 +53,7 @@ public class RemoteFileHandler {
 
     //Эмуляция сложной логики. При написании иестов реальный метод вызываться не должен
     //тут я конечно убрал private с надеждой на рассказ как это обойти )))
-    boolean validate(List<String> response) {
+    private boolean validate(List<String> response) {
         Random random = new Random();
         return random.nextBoolean();
     }
