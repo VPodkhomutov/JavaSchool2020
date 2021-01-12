@@ -11,6 +11,7 @@
         <module>lesson1</module>
         <module>lesson2_7</module>
         <module>lessonUnitTest</module>
+        <module>lessonMultiThreading</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
