@@ -82,14 +82,10 @@ public class RemoteFileHandlerTest {
    /*handleResponse*/
    //из-за приватного метода необходимо использовать spy
     @Test
-    public void handleResponseTestFail() {
+    public void handleResponseTestFail() throws Exception {
         List<String> tmp = Arrays.asList("One","error");
         RemoteFileHandler r = spy(new RemoteFileHandler(settingsLoader,responseRepository));
-        try {
-            PowerMockito.when(r,"validate",anyList()).thenReturn(false);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        PowerMockito.when(r,"validate",anyList()).thenReturn(false);
         r.handleResponse(tmp);
         verify(responseRepository).writeError(anyString());
     }
