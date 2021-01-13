@@ -4,7 +4,7 @@ public class Deadlock {
     private static final Object Table = new Object();
     private static final Object Fridge = new Object();
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Thread tableFridge = new Thread(new ThreadTableFridge());
         Thread fridgeTable = new Thread(new ThreadFridgeTable());
         tableFridge.start();
