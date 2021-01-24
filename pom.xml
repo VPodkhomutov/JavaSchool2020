@@ -12,6 +12,7 @@
         <module>lesson2_7</module>
         <module>lessonUnitTest</module>
         <module>lessonMultiThreading</module>
+        <module>db_core</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
