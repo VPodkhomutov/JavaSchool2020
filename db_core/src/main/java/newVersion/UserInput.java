@@ -7,20 +7,20 @@ public class UserInput {
     public void userAction(){
         TableAction ta = new TableAction();
         Scanner sc = new Scanner(System.in);
-        int sql_id;
+        int sqlId;
         while (true) {
             System.out.println("Введите одну из доступных команд(select/insert/update/delete/exit):");
             String s = sc.nextLine();
-            if (s.trim().toLowerCase().equals("exit")) {
+            if ("exit".equalsIgnoreCase(s)) {
                 System.exit(0);
             }
-            if (s.trim().toLowerCase().equals("select")) {
+            if ("select".equalsIgnoreCase(s)) {
                 System.out.println("Введите идентификатор строки:");
                 s = sc.nextLine();
                 try {
-                    sql_id = Integer.parseInt(s);
-                    if (ta.checkId(sql_id)) {
-                        ta.getForId(sql_id);
+                    sqlId = Integer.parseInt(s);
+                    if (ta.checkId(sqlId)) {
+                        ta.getForId(sqlId);
                     } else {
                         System.out.println("Такого идентификатора нет в таблице");
                     }
@@ -28,19 +28,19 @@ public class UserInput {
                     System.out.println("Введенный идентификатор не является числом");
                 }
             }
-            if (s.trim().toLowerCase().equals("insert")) {
+            if ("insert".equalsIgnoreCase(s)) {
                 System.out.println("Введите name:");
                 s = sc.nextLine();
                 ta.insert(s);
                 ta.viewAll();
             }
-            if (s.trim().toLowerCase().equals("delete")) {
+            if ("delete".equalsIgnoreCase(s)) {
                 System.out.println("Введите идентификатор строки:");
                 s = sc.nextLine();
                 try {
-                    sql_id = Integer.parseInt(s);
-                    if (ta.checkId(sql_id)) {
-                        ta.delete(sql_id);
+                    sqlId = Integer.parseInt(s);
+                    if (ta.checkId(sqlId)) {
+                        ta.delete(sqlId);
                     } else {
                         System.out.println("Такого идентификатора нет в таблице. Удаление невозможно");
                     }
@@ -49,17 +49,17 @@ public class UserInput {
                     System.out.println("Введенный идентификатор не является числом");
                 }
             }
-            if (s.trim().toLowerCase().equals("update")) {
+            if ("update".equalsIgnoreCase(s)) {
                 System.out.println("Введите идентификатор строки:");
                 s = sc.nextLine();
                 try {
-                    sql_id = Integer.parseInt(s);
-                    if (!ta.checkId(sql_id)) {
+                    sqlId = Integer.parseInt(s);
+                    if (!ta.checkId(sqlId)) {
                         System.out.println("Такого идентификатора нет в таблице. Обновление невозможно");
                     } else {
                         System.out.println("Введите новое значение name:");
                         s = sc.nextLine();
-                        ta.update(sql_id, s);
+                        ta.update(sqlId, s);
                     }
                     ta.viewAll();
                 } catch (Exception e) {

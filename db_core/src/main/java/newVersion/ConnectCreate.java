@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectCreate {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/mydatabase";
     private static final String USER = "postgres";
-    private static final String PASS = "java";
+    private static final String PASS = "java1";
 
 
     public static Connection getConnection() {
@@ -17,6 +17,7 @@ public class ConnectCreate {
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
             } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+            System.out.println("Нет коннекта до БД");
         }
         return connection;
     }

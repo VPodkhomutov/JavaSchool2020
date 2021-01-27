@@ -48,7 +48,6 @@ public class TableAction {
             result.next();
             result.getRow();
             return result.getInt("cnt")!=0;
-            //как здесь сделать result.close???
         } catch (SQLException e) {
             e.printStackTrace();
         }
